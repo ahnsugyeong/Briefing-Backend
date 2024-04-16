@@ -8,14 +8,15 @@ import com.example.briefingcommon.entity.enums.MemberRole;
 import com.example.briefingcommon.entity.enums.MemberStatus;
 import com.example.briefingcommon.entity.enums.SocialType;
 import com.example.briefinginfra.feign.oauth.google.dto.GoogleUserInfo;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
-@Component
-public class MemberConverter {
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class MemberMapper {
 
     public static MemberResponse.LoginDTO toLoginDTO(
             Member member, String accessToken, String refreshToken) {

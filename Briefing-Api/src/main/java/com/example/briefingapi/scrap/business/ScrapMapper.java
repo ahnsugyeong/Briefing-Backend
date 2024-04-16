@@ -6,8 +6,11 @@ import com.example.briefingapi.scrap.presentation.dto.ScrapResponse;
 import com.example.briefingcommon.entity.Briefing;
 import com.example.briefingcommon.entity.Member;
 import com.example.briefingcommon.entity.Scrap;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
-public class ScrapConverter {
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class ScrapMapper {
     public static ScrapResponse.CreateDTO toCreateDTO(Scrap createdScrap) {
         return ScrapResponse.CreateDTO.builder()
                 .scrapId(createdScrap.getId())

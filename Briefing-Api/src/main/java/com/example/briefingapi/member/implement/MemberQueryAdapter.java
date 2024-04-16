@@ -2,6 +2,7 @@ package com.example.briefingapi.member.implement;
 
 import java.util.Optional;
 
+import com.example.briefingapi.annotation.Adapter;
 import com.example.briefingcommon.domain.repository.member.MemberRepository;
 import com.example.briefingcommon.common.exception.MemberException;
 import com.example.briefingcommon.common.exception.common.ErrorCode;
@@ -14,9 +15,9 @@ import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 
-@Service
+@Adapter
 @RequiredArgsConstructor
-public class MemberQueryService {
+public class MemberQueryAdapter {
     private final MemberRepository memberRepository;
 
     public Member findById(Long memberId) {
