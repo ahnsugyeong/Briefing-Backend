@@ -35,6 +35,7 @@ public class BriefingResponseDTO {
         String title;
         String subtitle;
         @Builder.Default Integer scrapCount = 0;
+        @Builder.Default Integer viewCount = 0;
     }
 
     @Builder
