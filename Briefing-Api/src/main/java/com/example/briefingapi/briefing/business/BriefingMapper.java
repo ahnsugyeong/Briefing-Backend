@@ -23,6 +23,7 @@ public class BriefingMapper {
                 .title(briefing.getTitle())
                 .subtitle(briefing.getSubtitle())
                 .scrapCount(briefing.getScrapCount())
+                .viewCount(briefing.getViewCount())
                 .build();
     }
 
